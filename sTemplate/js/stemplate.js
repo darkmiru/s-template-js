@@ -158,14 +158,14 @@ var util = {
  */
  var processDefaultField = function (parent, elem, key, value, target, type) {
   if (target === undefined || target === null) {
-    if (elem.src != undefined) {
+    if (elem.value != undefined) {
+      elem.value = value;
+    }
+    else if (elem.src != undefined) {
       elem.src = value;
     }
     else if (elem.href != undefined) {
       elem.href = value;
-    }
-    else if (elem.value != undefined) {
-      elem.value = value;
     }
     else {
       elem.innerHTML = value;
@@ -523,8 +523,12 @@ function TemplateMgr() {
         fixed,
         subCheck
       );
-      if (!designMode && fixed == false && tList[i].parentElement) {
-        tList[i].parentElement.removeChild(tList[i]);
+    }
+    
+    for(var key in self.templateList) {
+      var template = self.templateList[key];
+      if (!designMode && template.fixed == false && template.parent) {
+        template.parent.removeChild(template.elem);
       }        
     }
     
