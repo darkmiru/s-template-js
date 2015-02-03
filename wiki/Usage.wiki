@@ -1,5 +1,10 @@
 == Usage ==
 
+<wiki:comment>
+// image url sample
+http://s-template-js.googlecode.com/svn/trunk/sTemplate/image/icon_good1.png
+</wiki:comment>
+
 1. Make HTML
 {{{
 <html>
