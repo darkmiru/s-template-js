@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi">
+<title>Template test</title>
+<script src="./js/stemplate.min.js" type="text/javascript"></script>
+<script src="./index.js" type="text/javascript"></script>
+<style type="text/css">
+body {
+  margin: 0px;
+}
+
+[template] {
+  /*display:none;*/
+}
+
+table td {
+  border: solid 1px blue;
+}
+</style>
+</head>
+
+<body class="" onload="javascript:test();">
+<div class="wrap"> 
+  <!-- header area -->
+  <header>
+    <h1>테스트</h1>
+  </header>
+  <!-- //header area -->
+  <section class="contents"> 
+    <!-- contents area -->
+    <div class="main">
+	    <table>
+	      <tr s-template="sample_template">
+          <td>
+            <a s-field="titleLink"><span class="card_type" s-field="title">title</span></a>
+          </td>
+          <td>
+            <span s-field="desc">desc</span>
+            <a s-field="imgLink"><img s-field="image1" src="./image/icon_good1.png"></a>
+          </td>  
+          <td s-field="etc">
+            etc
+          </td>  
+	      </tr>
+	      <tr s-dummy-tpl>
+          <td>
+            <a href="#"><span class="card_type">sample</span></a>
+          </td>
+          <td>
+            <span >desc</span>
+            <a href="#"><img src="./image/icon_good1.png"></a>
+          </td>  
+          <td>
+            etc
+          </td>  
+	      </tr>
+    	</table>
+    </div>
+    <div class="main2">
+	    <table>
+	      <tr s-template="sample_subtemplate">
+          <td s-template="sub_template">
+            <a s-field="titleLink"><span class="card_type" s-field="title">title</span></a>
+          </td>
+          <td s-dummy-tpl>
+            <a href="#"><span class="card_type">title2</span></a>
+          </td>
+	      </tr>
+    	</table>
+    </div>
+    <div s-template="fixed_template" s-fixed="true">
+      <span s-field="title">test</span><br>
+      <span s-field="desc">test</span><br>
+      <span s-field="desc2">test</span>
+    </div>
+  </section>
+</body>
+</html>
