@@ -14,7 +14,7 @@ http://s-template-js.googlecode.com/svn/trunk/sTemplate/image/icon_good1.png
   <body>
     <table>
       <tr>
-        <td>
+        <td style="border: solid 1px blue;">
           <a href="#"><span>test</span></a>
         </td>
       </tr>
@@ -33,7 +33,7 @@ http://s-template-js.googlecode.com/svn/trunk/sTemplate/image/icon_good1.png
   <body>
     <table>
       <tr s-template="template1">
-        <td>
+        <td style="border: solid 1px blue;">
           <a s-field="link1"><span s-field="text1">test</span></a>
         </td>
       </tr>
@@ -54,7 +54,7 @@ http://s-template-js.googlecode.com/svn/trunk/sTemplate/image/icon_good1.png
   <body>
     <table>
       <tr s-template="template1">
-        <td>
+        <td style="border: solid 1px blue;">
           <a s-field="link1"><span s-field="text1">test</span></a>
         </td>
       </tr>
@@ -95,7 +95,7 @@ http://s-template-js.googlecode.com/svn/trunk/sTemplate/image/icon_good1.png
   <body onload="javascript:load();">
     <table>
       <tr s-template="template1">
-        <td>
+        <td style="border: solid 1px blue;">
           <a s-field="link1"><span s-field="text1">test</span></a>
         </td>
       </tr>
