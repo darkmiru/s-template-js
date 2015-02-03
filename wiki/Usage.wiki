@@ -105,3 +105,5 @@ http://s-template-js.googlecode.com/svn/trunk/sTemplate/image/icon_good1.png
 }}}
 
 5. save and test.
+
+http://s-template-js.googlecode.com/svn/image/stemplate_result01.PNG
