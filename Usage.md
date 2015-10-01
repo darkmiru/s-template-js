@@ -1,0 +1,109 @@
+## Usage ##
+
+<a href='Hidden comment: 
+// image url sample
+http://s-template-js.googlecode.com/svn/trunk/sTemplate/image/icon_good1.png
+'></a>
+
+1. Make HTML
+```
+<html>
+  <head>
+  <title>template test</title>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td style="border: solid 1px blue;">
+          <a href="#"><span>test</span></a>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+```
+
+
+2. Add Attribute
+```
+<html>
+  <head>
+  <title>template test</title>
+  </head>
+  <body>
+    <table>
+      <tr s-template="template1">
+        <td style="border: solid 1px blue;">
+          <a s-field="link1"><span s-field="text1">test</span></a>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+```
+
+
+3. insert script tag (stemplate.js)
+```
+<html>
+  <head>
+  <title>template test</title>
+  <!-- insert script -->
+  <script src="./js/stemplate.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <table>
+      <tr s-template="template1">
+        <td style="border: solid 1px blue;">
+          <a s-field="link1"><span s-field="text1">test</span></a>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+```
+
+4. coding.
+```
+<html>
+  <head>
+  <title>template test</title>
+  <!-- insert script -->
+  <script src="./js/stemplate.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    function load() {
+      var template1 = stpl.getTemplate("template1");
+      var data1 = {
+        link1 : "test.html",
+        text1 : "test link"
+      };
+      template1.addData(data1);
+
+      var data2 = {
+        link1 : "test2.html",
+        text1 : "test2 link"
+      };
+      template1.addData(data2);
+
+      template1.addData({
+        link1 : "test3.html",
+        text1 : "test3 link"
+      });
+    }
+  </script>
+  </head>
+  <body onload="javascript:load();">
+    <table>
+      <tr s-template="template1">
+        <td style="border: solid 1px blue;">
+          <a s-field="link1"><span s-field="text1">test</span></a>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+```
+
+5. save and test.
+
+http://s-template-js.googlecode.com/svn/image/stemplate_result01.PNG
