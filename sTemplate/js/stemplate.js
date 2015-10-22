@@ -174,8 +174,11 @@ var util = {
   else {
     if (type == "attr") {
       elem.setAttribute(target, value);
-    }
-    else { // type == "prop"
+    } else if (type == "func") {
+      if (value) {
+        value(parent, elem, key);
+      }
+    } else { // type == "prop"
       elem[target] = value;
     }
   }
